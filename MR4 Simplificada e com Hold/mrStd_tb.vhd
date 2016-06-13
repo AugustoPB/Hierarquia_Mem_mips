@@ -273,21 +273,13 @@ begin
 					if hitCheck(l) = '1' then
 						case addressFront(4 downto 2) is
 							when "000" => dataFront <= DATACACHE(l)(255 downto 224);
-							
 							when "001" => dataFront <= DATACACHE(l)(223 downto 192);
-							
 							when "010" => dataFront <= DATACACHE(l)(191 downto 160);
-							
 							when "011" => dataFront <= DATACACHE(l)(159 downto 128);
-							
 							when "100" => dataFront <= DATACACHE(l)(127 downto 96);
-							
 							when "101" => dataFront <= DATACACHE(l)(95 downto 64);
-							
 							when "110" => dataFront <= DATACACHE(l)(63 downto 32);
-							
 							when "111" => dataFront <= DATACACHE(l)(31 downto 0);
-						
 							when others => dataFront <= (others => 'Z');
 						end case;
 					exit dout;
